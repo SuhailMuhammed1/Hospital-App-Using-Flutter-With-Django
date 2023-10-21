@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LAB REPORT</title>
+</head>
+<style>
+ {#table {#}
+ {#       width: 100%;#}
+ {#       border-collapse: collapse;#}
+ {#   }#}
+    th, td {
+        {#padding: 8px;#}
+        text-align: center;
+    }
+
+    th {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+<center>
+	<h1>PHC MOOKKANNOOR</h1>
+	<h2><u>LABORATORY REPORT</u></h2>
+
+	<table style="width: 100%">
+{% for i in k %}
+<tr>
+<td>Name of the Patient:  </td> <td>{{ i.name }}    </td>                         <td>   Age:</td>        <td>{{ i.age }} </td>    <td> Sex:</td><td>{{ i.sex }}</td></tr>
+<br>
+<tr><td>IP/OP Number:</td><td> </td>                            <td> Referred by Doctor:</td><td></td></tr>
+</table>
+</center>
+<table border="1" align="center" style="width: 100%">
+	<tr>
+		<td>Test</td>
+		<td>Result</td>
+		<td>Normal Value</td>
+		<td>Test</td>
+		<td>Result</td>
+		<td>Normal Value</td>
+	</tr>
+	<tr>
+		<td colspan="3">HAEMATOLOGY</td>
+		<td>Epithelial cells</td>
+		<td>{{ i.epithelial }}</td>
+		<td>{{ i.epithelial }}</td>
+	</tr>
+	<tr>
+		<td>Haemoglobin</td>
+		<td>{{ i.heamoglobin }} gm%</td>
+		<td>12-15 gm%</td>
+		<td>Crystals</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Total WBC Count</td>
+		<td>{{ i.total_wbc_count }}/mm<sup>3</sup></td>
+		<td>5000-11000</td>
+		<td>Casts</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>DC Neutrophil</td>
+		<td>{{ i.dc_neutrophil }}%</td>
+		<td>60-70</td>
+		<td>Bacteria</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Lymphocyte</td>
+		<td>{{ i.lymphocyte }}%</td>
+		<td>20-40</td>
+		<td>Bile Salt</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Eosinophil</td>
+		<td>{{ i.eosinophil }}%</td>
+		<td>1-6</td>
+		<td>Bile pigment</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Basophil</td>
+		<td>{{ i.basophil }}%</td>
+		<td>0-1</td>
+		<td colspan="3" rowspan="5">STOOL R/E</td>
+	</tr>
+<tr>
+		<td>Monocyte</td>
+		<td>{{ i.monocyte }}%</td>
+		<td>3-4</td>
+	</tr>
+	<tr>
+		<td>ESR</td>
+		<td>{{ i.esr }}mm/hr</td>
+		<td>0-15</td>
+	</tr>
+	<tr>
+		<td>Platelet count</td>
+		<td>{{ i.platelet_count }}lakh/mm<sup>3</sup></td>
+		<td>1.5-4.5</td>
+	</tr>
+	<tr>
+		<td colspan="3">PARASITOLOGY</td>
+	</tr>
+	<tr>
+		<td>Malarial Parasite</td>
+		<td>{{ i.malarial_parasite }}</td>
+		<td></td>
+		<td colspan="3" rowspan="4">SPUTUM AFB</td>
+	</tr>
+	<tr>
+		<td colspan="3">URINE</td>
+	</tr>
+	<tr>
+		<td>Albumin</td>
+		<td>{{ i.albumin }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Sugar</td>
+		<td>{{ i.sugar }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Microscopy</td>
+		<td>{{ i.microscopy }}</td>
+		<td></td>
+		<td colspan="3">Serum electrolytes</td>
+	</tr>
+	<tr>
+		<td>Puscells</td>
+		<td>{{ i.pusceils }}</td>
+		<td></td>
+		<td>Sodium</td>
+		<td>{{ i.sodium }}meq/1</td>
+		<td>135-145</td>
+	</tr>
+	<tr>
+		<td>RCB'S</td>
+		<td>{{ i.rbcs }}</td>
+		<td></td>
+		<td>Potassium</td>
+		<td>{{ i.potassium }}meq/1</td>
+		<td>3.5-5</td>
+	</tr>
+	<tr>
+		<td colspan="3">BIOCHEMISTRY</td>
+		<td>T Protein</td>
+		<td>{{ i.tprotien }}gm%</td>
+		<td>6.2-8.0</td>
+	</tr>
+	<tr>
+		<td>FBS</td>
+		<td>{{ i.fbs }}mg%</td>
+		<td>70-110</td>
+		<td>Albumin</td>
+		<td>{{ i.albumin1 }}gm%</td>
+		<td>3.5-5.5</td>
+	</tr>
+	<tr>
+		<td>RBS</td>
+		<td>{{ i.rbs }}mg%</td>
+		<td>80-120</td>
+		<td>Globulin</td>
+		<td>{{ i.globulin }}gm%</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>PPBS</td>
+		<td>{{ i.ppbs }}mg%</td>
+		<td>90-130</td>
+		<td>A/G Ratio</td>
+		<td>{{ i.ag_ratio }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>HbA1c</td>
+		<td>{{ i.hba1c }}</td>
+		<td></td>
+		<td>Alkaline Phosphatase</td>
+		<td>{{ i.alakine_phos }}Iu/L</td>
+		<td>80--306</td>
+	</tr>
+	<tr>
+		<td colspan="3">LIPID PROFILE</td>
+		<td colspan="3">RFT</td>
+	</tr>
+	<tr>
+		<td>T.Cholestrol</td>
+		<td>{{ i.t_cholestrol }}mg%</td>
+		<td>150-220</td>
+		<td>Urea</td>
+		<td>{{ i.urea }}mg%</td>
+		<td>10-50</td>
+	</tr>
+	<tr>
+		<td>Triglycerides</td>
+		<td>{{ i.triglycerides }}mg%</td>
+		<td>60-165</td>
+		<td>S.Creatine</td>
+		<td>{{ i.screat }}mg%</td>
+		<td>0.7-7.7</td>
+	</tr>
+	<tr>
+		<td>HDL</td>
+		<td>{{ i.hdl }}mg%</td>
+		<td>35-80</td>
+		<td>S.Uric Acid</td>
+		<td>{{ i.suricacid }}mg%</td>
+		<td>3.6-7.7</td>
+	</tr>
+	<tr>
+		<td>LDL</td>
+		<td>{{ i.ldl }}mg%</td>
+		<td>< 130</td>
+		<td colspan="3">Card test:</td>
+	</tr>
+	<tr>
+		<td>VLDL</td>
+		<td>{{ i.vldl }}mg%</td>
+		<td>2-30</td>
+		<td>HIV</td>
+		<td>{{ i.hiv }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="3">LFT</td>
+		<td>HBsAg</td>
+		<TD>{{ i.hbsag }}</TD>
+		<td></td>
+	</tr>
+	<tr>
+		<td>T Bilirubin</td>
+		<td>{{ i.tbirirubin }}mg%</td>
+		<td>up to 1.2</td>
+		<td>RDT(for malaria)</td>
+		<td>{{ i.rdt }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>D Bilirubin</td>
+		<td>{{ i.dbilirubin }}mg%</td>
+		<td>up to 0.4</td>
+		<td>DENGUE</td>
+		<td>{{ i.dengue }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SGOT</td>
+		<td>{{ i.sgot }}IU/L</td>
+		<td>20-40</td>
+		<td>NS1Ag</td>
+		<td>{{ i.ns1ag }}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>SGPT</td>
+		<td>{{ i.sgpt }}IU/L</td>
+		<td>20-40</td>
+		<td>LgG 1gM</td>
+		<td>{{ i.lgg1gm }}</td>
+		<td></td>
+	</tr>
+	</table>
+	<center>
+
+<table>
+		<tr>
+	<td>Date of reporting:</td>
+</tr>
+<tr>
+	<td>Name of lab technician</td>
+</tr>
+<tr>
+	<td>Signature</td>
+</tr>
+{% endfor %}
+</table>
+</center>
+</body>
+</html>
